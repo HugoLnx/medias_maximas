@@ -1,3 +1,3 @@
 require './lib/model/model.rb'
-require './lib/reporters/aproveitamento_maximo_reporter.rb'
+require './lib/reporters/reporters.rb'
 require './lib/config.rb'
