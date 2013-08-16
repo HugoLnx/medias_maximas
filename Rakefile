@@ -12,3 +12,10 @@ task :max do
   reporter = MediasMaximas::AproveitamentoMaximoReporter.new
   reporter.imprimir semestre
 end
+
+desc "Imprime o máximo de média que você pode ter dado as notas que você já teve"
+task :cr do
+  semestre = MediasMaximas::Semestre.da_config MediasMaximas::Config.ler_como_hash
+  reporter = MediasMaximas::MediasReporter.new
+  reporter.imprimir semestre
+end

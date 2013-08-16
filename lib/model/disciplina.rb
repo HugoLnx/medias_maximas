@@ -29,5 +29,9 @@ module MediasMaximas
     def media_max
       criterio.media_max_para @notas
     end
+
+    def media_final
+      @arredondacao || criterio.media_para(@notas)
+    end
   end
 end

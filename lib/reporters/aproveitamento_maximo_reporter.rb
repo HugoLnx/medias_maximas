@@ -8,4 +8,12 @@ module MediasMaximas
       puts "CR máximo: #{semestre.cr_maximo.round(2)}"
     end
   end
+
+  class MediasReporter
+    def imprimir(semestre)
+      semestre.disciplinas.each do |disciplina|
+        puts "#{disciplina.nome}: #{disciplina.media_final.round(2)}   =>   #{disciplina.criterio.formula}"
+      end
+    end
+  end
 end

@@ -5,6 +5,11 @@ module MediasMaximas
       @formula = formula
     end
 
+    def media_para(notas)
+      formula = formula_com notas
+      eval formula
+    end
+
     def formula_com(notas)
       formula = @formula.clone
       notas.each.with_index do |nota, i|
