@@ -29,9 +29,5 @@ module MediasMaximas
     def media_max
       criterio.media_max_para @notas
     end
-
-    def calc_media_max
-      criterio.calc_media_max_para @notas
-    end
   end
 end
