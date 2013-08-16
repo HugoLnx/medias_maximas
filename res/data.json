@@ -1,0 +1,40 @@
+{
+  "jesus1": {
+    "criterio": 2,
+    "creditos": 4,
+    "notas": [8.0, 10.0],
+    "arredondacao_final": 9.3
+  },
+
+  "laboratorio": {
+    "criterio": 3,
+    "creditos": 2,
+    "notas": [5.0, 6.8]
+  },
+
+  "fisica": {
+    "criterio": 4,
+    "creditos": 4,
+    "notas": [9.2, 9.0, 7.3]
+  },
+
+  "modelagem": {
+    "criterio": 8,
+    "creditos": 2,
+    "notas": [9.6, 9.6]
+  },
+
+  "ihc": {
+    "criterio": 2,
+    "creditos": 4,
+    "notas": [7.4, 9.6],
+    "arredondacao_final": 8.9
+  },
+
+  "logica": {
+    "criterio": 4,
+    "creditos": 4,
+    "notas": [8.5, 10.0, 9.25],
+    "arredondacao_final": 9.3
+  }
+}
