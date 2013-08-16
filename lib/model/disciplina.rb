@@ -1,5 +1,5 @@
 class Disciplina
-  attr_reader :nome, :criterio, :creditos, :notas
+  attr_reader :nome, :criterio, :creditos, :notas, :arredondacao
 
   CRITERIOS = {
     2 => %q{(g1 + g2*2.0) / 3.0},
@@ -12,15 +12,17 @@ class Disciplina
     criterio = Criterio.new(CRITERIOS[dados["criterio"]])
     creditos = dados["creditos"].to_f
     notas = dados["notas"]
+    arredondacao = dados["arredondacao_final"]
 
-    self.new(nome, criterio, creditos, notas)
+    self.new(nome, criterio, creditos, notas, arredondacao)
   end
 
-  def initialize(nome, criterio, creditos, notas)
+  def initialize(nome, criterio, creditos, notas, arredondacao)
     @nome = nome
     @criterio = criterio
     @creditos = creditos
     @notas = notas
+    @arredondacao = arredondacao
   end
 
   def media_max
