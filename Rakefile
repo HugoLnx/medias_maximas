@@ -8,7 +8,7 @@ require 'json'
 
 desc "Imprime o máximo de média que você pode ter dado as notas que você já teve"
 task :max do
-  semestre = Semestre.da_config Config.ler_como_hash
-  reporter = AproveitamentoMaximoReporter.new
+  semestre = MediasMaximas::Semestre.da_config MediasMaximas::Config.ler_como_hash
+  reporter = MediasMaximas::AproveitamentoMaximoReporter.new
   reporter.imprimir semestre
 end
