@@ -4,6 +4,6 @@ class AproveitamentoMaximoReporter
       puts "#{disciplina.nome}: #{disciplina.media_max.round(2)}   =>   #{disciplina.criterio.formula}"
     end
 
-    puts "CR: #{semestre.cr_maximo.round(2)}"
+    puts "CR máximo: #{semestre.cr_maximo.round(2)}"
   end
 end
