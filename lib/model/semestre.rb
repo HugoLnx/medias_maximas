@@ -21,5 +21,10 @@ module MediasMaximas
     def cr_maximo
       @disciplinas.map{|d| d.media_max * d.creditos}.inject(:+) / creditos
     end
+
+    def cr_individual
+      cr = @disciplinas.map{|d| d.media_final * d.creditos}.inject(:+) / creditos
+      cr.round 1
+    end
   end
 end

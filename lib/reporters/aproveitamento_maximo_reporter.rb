@@ -14,6 +14,8 @@ module MediasMaximas
       semestre.disciplinas.each do |disciplina|
         puts "#{disciplina.nome}: #{disciplina.media_final.round(2)}   =>   #{disciplina.criterio.formula}"
       end
+
+      puts "CR: #{semestre.cr_individual.round(2)}"
     end
   end
 end
