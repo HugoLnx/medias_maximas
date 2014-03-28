@@ -2,15 +2,8 @@ module MediasMaximas
   class Disciplina
     attr_reader :nome, :criterio, :creditos, :notas, :arredondacao
 
-    CRITERIOS = {
-      2 => %q{(g1 + g2*2.0) / 3.0},
-      3 => %q{(g1 + g2) / 2.0},
-      4 => %q{(g1 + g2 + g3) / 3.0},
-      8 => %q{(g1*2 + g1*3.0) / 5.0}
-    }
-
     def self.da_config(nome, dados={})
-      criterio = Criterio.new(CRITERIOS[dados["criterio"]])
+      criterio = Criterio.new(Criterio.build(dados["criterio"]))
       creditos = dados["creditos"].to_f
       notas = dados["notas"]
       arredondacao = dados["arredondacao_final"]

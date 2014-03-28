@@ -1,6 +1,11 @@
 module MediasMaximas
   class Criterio
     attr_reader :formula, :notas_usadas
+
+    def self.build(number)
+      MediasMaximas::Config.ler_criterios_como_hash[number.to_s]
+    end
+
     def initialize(formula)
       @formula = formula
     end
